@@ -7,6 +7,8 @@ public class PlayerControllerEX : MonoBehaviour
     [SerializeField]
     private float movementSpeed;
 
+    [SerializeField] private TrailRenderer tr;
+
     void Start()
     {
 
