@@ -6,12 +6,13 @@ public class PlayerControllerEX : MonoBehaviour
 {
     [SerializeField]
     private float movementSpeed;
-
-    [SerializeField] private TrailRenderer tr;
+    private float speed;
+    private bool isMoving;
+    public Rigidbody rb;
 
     void Start()
     {
-
+        speed = movementSpeed;
     }
 
     void Update()
@@ -19,10 +20,26 @@ public class PlayerControllerEX : MonoBehaviour
         HandleMovementInput();
         HandleRotationInput();
         HandleShootInput();
+        if((!Input.GetKey("w")) && (!Input.GetKey("a")) && (!Input.GetKey("s")) && (!Input.GetKey("d")))
+        {
+            isMoving = false;
+            Debug.Log("Player is not moving");
+        }
+        else
+        {
+            isMoving = true;
+            Debug.Log("Player is moving");
+        }
+        if(!isMoving)
+        {
+            rb.velocity = Vector3.zero;
+        }
+
     }
 
     void HandleMovementInput()
     {
+        movementSpeed = speed;
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 

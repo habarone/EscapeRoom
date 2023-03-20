@@ -468,7 +468,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146589118}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -552,8 +552,18 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!1 &1165052178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7765317262978550637, guid: c96121e30dc52ab4aa4605914f68694e, type: 3}
+  m_PrefabInstance: {fileID: 6776596114955976936}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1165052181 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 1023193720, guid: c96121e30dc52ab4aa4605914f68694e, type: 3}
+  m_PrefabInstance: {fileID: 6776596114955976936}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1266530405
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,13 +984,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1023193720, guid: c96121e30dc52ab4aa4605914f68694e, type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023193720, guid: c96121e30dc52ab4aa4605914f68694e, type: 3}
       propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1023193720, guid: c96121e30dc52ab4aa4605914f68694e, type: 3}
       propertyPath: m_Constraints
-      value: 36
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1023193720, guid: c96121e30dc52ab4aa4605914f68694e, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329569886198491756, guid: c96121e30dc52ab4aa4605914f68694e, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 0d32197659e401740addf9902e3d27b2, type: 2}
     - target: {fileID: 4514556519067615343, guid: c96121e30dc52ab4aa4605914f68694e, type: 3}
       propertyPath: invisibilethings
       value: 
@@ -1037,5 +1059,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Capsule
       objectReference: {fileID: 0}
+    - target: {fileID: 8626479568895382131, guid: c96121e30dc52ab4aa4605914f68694e, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1165052181}
+    - target: {fileID: 8626479568895382131, guid: c96121e30dc52ab4aa4605914f68694e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1165052178}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c96121e30dc52ab4aa4605914f68694e, type: 3}
