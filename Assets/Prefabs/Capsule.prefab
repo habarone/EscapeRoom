@@ -128,6 +128,37 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2327150808044506928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8972470684113939786}
+  m_Layer: 0
+  m_Name: TeleportingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8972470684113939786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2327150808044506928}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.415, y: 0.120000005, z: 5.49}
+  m_LocalScale: {x: 0.061399, y: 0.052432, z: 0.62356}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6779840769365400753}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5193373136310624815
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +193,7 @@ Transform:
   m_Children:
   - {fileID: 653208081379345515}
   m_Father: {fileID: 6779840769365400753}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2802730895561001615
 MeshFilter:
@@ -453,6 +484,7 @@ GameObject:
   - component: {fileID: 8626479568895382131}
   - component: {fileID: 1023193720}
   - component: {fileID: 3008725590905116905}
+  - component: {fileID: 8402330074313095901}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -475,6 +507,7 @@ Transform:
   - {fileID: 4357129902524136167}
   - {fileID: 137238569922108039}
   - {fileID: 6370371593876465386}
+  - {fileID: 8972470684113939786}
   - {fileID: 3819517837184178857}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -569,6 +602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
+  tr: {fileID: 0}
 --- !u!54 &1023193720
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -693,3 +727,16 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 0
+--- !u!114 &8402330074313095901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7765317262978550637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6225ec2be814a0b459cc9384c65382ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportPoint: {fileID: 2327150808044506928}
