@@ -23,12 +23,12 @@ public class PlayerControllerEX : MonoBehaviour
         if((!Input.GetKey("w")) && (!Input.GetKey("a")) && (!Input.GetKey("s")) && (!Input.GetKey("d")))
         {
             isMoving = false;
-            Debug.Log("Player is not moving");
+           // Debug.Log("Player is not moving");
         }
         else
         {
             isMoving = true;
-            Debug.Log("Player is moving");
+           // Debug.Log("Player is moving");
         }
         if(!isMoving)
         {
