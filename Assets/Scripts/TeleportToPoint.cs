@@ -20,6 +20,7 @@ public class TeleportToPoint : MonoBehaviour
     {
        if(Input.GetKeyDown("q") && ableToPort)
         {
+            //PLAY TELEPORT SOUND HERE
             telePos = teleportPoint.transform.position;
             this.transform.position = telePos;
             StartCoroutine(TeleportCooldown());

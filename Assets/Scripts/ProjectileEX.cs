@@ -44,5 +44,9 @@ public class ProjectileEX : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(this.gameObject);
         }
+        else if(other.tag == "Wall")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

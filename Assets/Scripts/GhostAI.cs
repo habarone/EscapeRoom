@@ -46,6 +46,7 @@ public class GhostAI : MonoBehaviour
     {
         if(other.gameObject.tag == "FreezeProjectile")
         {
+            //PLAY GHOST FREEZE SOUND HERE
             StartCoroutine(FreezingProcess());
             Destroy(other.gameObject);
             Debug.Log("Contact with ghost");

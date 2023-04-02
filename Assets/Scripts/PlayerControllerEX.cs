@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class PlayerControllerEX : MonoBehaviour
@@ -16,6 +18,8 @@ public class PlayerControllerEX : MonoBehaviour
     private bool isHit = false;
     private bool isInvulnerable = false;
     public TextMeshProUGUI lifeCount;
+
+    public UnityEvent PlayerDeath;
 
     void Start()
     {
@@ -35,6 +39,7 @@ public class PlayerControllerEX : MonoBehaviour
         else
         {
             isMoving = true;
+            //PLAY WALK ANIMATION HERE
            // Debug.Log("Player is moving");
         }
         if(!isMoving)
@@ -46,6 +51,13 @@ public class PlayerControllerEX : MonoBehaviour
             Application.Quit();
         }
         lifeCount.text = "Lives: " + lives.ToString();
+        if(lives == 0)
+        {
+            PlayerDeath.Invoke();
+            //INSERT PLAYER DEATH ANIMATION HERE
+            //PLAY DEATH SOUND HERE
+            StartCoroutine(ResetLevel());
+        }
 
     }
 
@@ -57,6 +69,7 @@ public class PlayerControllerEX : MonoBehaviour
 
         Vector3 movement = new Vector3(horizontal, 0, vertical);
         transform.Translate(Quaternion.Euler(0, 45, 0) * (movement * movementSpeed * Time.deltaTime), Space.World);
+        //INSERT WALKING ANIMATION HERE
     }
 
     void HandleRotationInput()
@@ -74,7 +87,8 @@ public class PlayerControllerEX : MonoBehaviour
     {
         if(Input.GetButton("Fire1"))
         {
-            // Shoot
+            //INSERT SHOOTING ANIMATION HERE
+            //PLAY SHOOT SOUND HERE
             PlayerGun.Instance.Shoot();
         }
     }
@@ -104,6 +118,12 @@ public class PlayerControllerEX : MonoBehaviour
         yield return new WaitForSeconds(2f);
         ghostDamage = 1;
         isInvulnerable = false;
+    }
+
+    IEnumerator ResetLevel()
+    {
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 }

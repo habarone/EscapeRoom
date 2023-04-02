@@ -19,6 +19,7 @@ public class Invisibility : MonoBehaviour
     {
         if (Input.GetKeyDown("e"))
         {
+            //PLAY GLASSES SOUND HERE
             StartCoroutine(InvisibleReveal());
         }
     }
@@ -34,5 +35,6 @@ public class Invisibility : MonoBehaviour
             yield return null;
         }
         invisibilethings.SetActive(true);
+        //PLAY GLASSES OFF SOUND HERE
     }
 }
