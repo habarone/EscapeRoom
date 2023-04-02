@@ -12,6 +12,9 @@ public class ProjectileEX : MonoBehaviour
     [SerializeField]
     private float maxProjectileDistance;
 
+    [SerializeField]
+    private float freezeTime = 3f;
+
     void Start()
     {
         firingPoint = transform.position;

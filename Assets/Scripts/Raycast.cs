@@ -19,13 +19,13 @@ public class Raycast : MonoBehaviour
             if(hit.collider.tag == "Wall")
             {
                 tpScript.ableToPort = false;
-                Debug.Log("Hitting a wall");
+                //Debug.Log("Hitting a wall");
             }
         }
         if(!(Physics.Raycast(theRay, out RaycastHit hit2, range)) && tpScript.coolingDown == false)
         {
             tpScript.ableToPort = true;
-            Debug.Log("Hitting nothing");
+            //Debug.Log("Hitting nothing");
         }
     }
 }

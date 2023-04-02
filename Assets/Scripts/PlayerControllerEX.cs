@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerControllerEX : MonoBehaviour
 {
@@ -8,7 +9,13 @@ public class PlayerControllerEX : MonoBehaviour
     private float movementSpeed;
     private float speed;
     private bool isMoving;
+    public bool isPaused;
     public Rigidbody rb;
+    public int lives = 3;
+    public int ghostDamage = 1;
+    private bool isHit = false;
+    private bool isInvulnerable = false;
+    public TextMeshProUGUI lifeCount;
 
     void Start()
     {
@@ -38,6 +45,7 @@ public class PlayerControllerEX : MonoBehaviour
         {
             Application.Quit();
         }
+        lifeCount.text = "Lives: " + lives.ToString();
 
     }
 
@@ -69,6 +77,33 @@ public class PlayerControllerEX : MonoBehaviour
             // Shoot
             PlayerGun.Instance.Shoot();
         }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Enemy")
+        {
+            GetDamaged();
+        }
+    }
+
+    void GetDamaged()
+    {
+        lives -= ghostDamage;
+        Debug.Log("Player took damage");
+        if(isInvulnerable == false)
+        {
+            StartCoroutine("OnInvulnerable");
+        }
+    }
+
+    IEnumerator OnInvulnerable()
+    {
+        isInvulnerable = true;
+        ghostDamage = 0;
+        yield return new WaitForSeconds(2f);
+        ghostDamage = 1;
+        isInvulnerable = false;
     }
 
 }

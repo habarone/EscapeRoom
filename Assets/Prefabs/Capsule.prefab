@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 653208081379345515}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FiringPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 1964441289360538131}
   - component: {fileID: 8044862751246701533}
   - component: {fileID: 8778580991597810861}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8972470684113939786}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TeleportingPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 6804227831853204639}
   - component: {fileID: 5541802545608001870}
   - component: {fileID: 2621428170231308409}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 1128539297883106788}
   - component: {fileID: 2055496432289890216}
   - component: {fileID: 2256691696129958951}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 1104205223530551381}
   - component: {fileID: 8287291531824004737}
   - component: {fileID: 1789150397572369521}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,14 +479,16 @@ GameObject:
   - component: {fileID: 6779840769365400753}
   - component: {fileID: 5160206653929555937}
   - component: {fileID: 8629017300387298841}
+  - component: {fileID: 5916472263287246196}
   - component: {fileID: 329569886198491756}
   - component: {fileID: 4617630706039088895}
+  - component: {fileID: 8754322069169550847}
   - component: {fileID: 4514556519067615343}
   - component: {fileID: 8626479568895382131}
   - component: {fileID: 1023193720}
   - component: {fileID: 3008725590905116905}
   - component: {fileID: 8402330074313095901}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -563,6 +565,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5916472263287246196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7765317262978550637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e341f54a68a9774baaa88367e374d3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GamePaused:
+    m_PersistentCalls:
+      m_Calls: []
+  GameResumed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!136 &329569886198491756
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -590,6 +610,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 5
+  tpScript: {fileID: 0}
+--- !u!114 &8754322069169550847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7765317262978550637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300a9be0f2530de45822670b8d480292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  HMText: {fileID: 0}
 --- !u!114 &4514556519067615343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -603,6 +638,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invisibilethings: {fileID: 0}
+  invisibleCooldown: 10
+  ableToPress: 1
 --- !u!114 &8626479568895382131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,6 +653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
+  isPaused: 0
   rb: {fileID: 1023193720}
 --- !u!54 &1023193720
 Rigidbody:
@@ -754,3 +792,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportPoint: {fileID: 2327150808044506928}
+  cooldown: 5
+  ableToPort: 1
+  coolingDown: 0
