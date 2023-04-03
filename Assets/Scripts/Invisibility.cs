@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class Invisibility : MonoBehaviour
 {
-    public GameObject invisibilethings;
+    public GameObject invisibleThing1;
+    public GameObject invisibleThing2;
+    public GameObject invisibleThing3;
+
     public float invisibleCooldown = 10f;
     public bool ableToPress = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        invisibilethings.SetActive(true);
+        invisibleThing1.SetActive(true);
+        invisibleThing2.SetActive(true);
+        invisibleThing3.SetActive(true);
     }
 
     // Update is called once per frame
@@ -30,11 +35,15 @@ public class Invisibility : MonoBehaviour
         while(timer < invisibleCooldown)
         {
             ableToPress = false;
-            invisibilethings.SetActive(false);
+            invisibleThing1.SetActive(false);
+            invisibleThing2.SetActive(false);
+            invisibleThing3.SetActive(false);
             timer += Time.deltaTime;
             yield return null;
         }
-        invisibilethings.SetActive(true);
+        invisibleThing1.SetActive(true);
+        invisibleThing2.SetActive(true);
+        invisibleThing3.SetActive(true);
         //PLAY GLASSES OFF SOUND HERE
     }
 }

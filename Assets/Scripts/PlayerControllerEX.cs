@@ -49,10 +49,7 @@ public class PlayerControllerEX : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
         }
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
+
         lifeCount.text = "Lives: " + lives.ToString();
         if(lives == 0)
         {
