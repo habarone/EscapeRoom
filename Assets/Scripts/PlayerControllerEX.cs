@@ -19,11 +19,14 @@ public class PlayerControllerEX : MonoBehaviour
     private bool isInvulnerable = false;
     public TextMeshProUGUI lifeCount;
 
+    public Collectibles collectibleScript;
+
     public UnityEvent PlayerDeath;
 
     void Start()
     {
         speed = movementSpeed;
+        collectibleScript = GetComponent<Collectibles>();
     }
 
     void Update()
@@ -98,6 +101,13 @@ public class PlayerControllerEX : MonoBehaviour
         if(other.gameObject.tag == "Enemy")
         {
             GetDamaged();
+        }
+        if(other.gameObject.tag == "WinTV")
+        {
+            if(collectibleScript.HMCount == 3)
+            {
+                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
     }
 

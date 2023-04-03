@@ -9,7 +9,7 @@ public class Collectibles : MonoBehaviour
     public int speed;
     
     
-    int HMCount = 0;
+    public int HMCount = 0;
     public TextMeshProUGUI HMText;
     //for audio add:
     //public AudioSource audioSource; (audiosource should be added to player)
