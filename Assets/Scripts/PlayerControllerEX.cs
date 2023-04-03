@@ -10,7 +10,7 @@ public class PlayerControllerEX : MonoBehaviour
     [SerializeField]
     private float movementSpeed;
     private float speed;
-    private bool isMoving;
+    public bool isMoving;
     public bool isPaused;
     public Rigidbody rb;
     public int lives = 3;
@@ -18,6 +18,8 @@ public class PlayerControllerEX : MonoBehaviour
     private bool isHit = false;
     private bool isInvulnerable = false;
     public TextMeshProUGUI lifeCount;
+
+    public Animator animator;
 
     public Collectibles collectibleScript;
 
@@ -27,6 +29,7 @@ public class PlayerControllerEX : MonoBehaviour
     {
         speed = movementSpeed;
         collectibleScript = GetComponent<Collectibles>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -37,12 +40,13 @@ public class PlayerControllerEX : MonoBehaviour
         if((!Input.GetKey("w")) && (!Input.GetKey("a")) && (!Input.GetKey("s")) && (!Input.GetKey("d")))
         {
             isMoving = false;
+            animator.SetBool("isWalking", false);
            // Debug.Log("Player is not moving");
         }
         else
         {
             isMoving = true;
-            //PLAY WALK ANIMATION HERE
+            animator.SetBool("isWalking", true); 
            // Debug.Log("Player is moving");
         }
         if(!isMoving)
