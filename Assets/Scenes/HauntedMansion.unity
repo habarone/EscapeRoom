@@ -1495,8 +1495,8 @@ NavMeshAgent:
   m_GameObject: {fileID: 129514962}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 361.0434
-  m_Speed: 3.5
+  m_Radius: 0.5
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1504,7 +1504,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 632.4126
+  m_Height: 1
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -10692,6 +10692,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Model_Ghost
       objectReference: {fileID: 0}
+    - target: {fileID: 112685471002216838, guid: 59e0968749a1bf046b3fed5d50565ce7, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 782366819441644348, guid: 59e0968749a1bf046b3fed5d50565ce7, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -10702,7 +10706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 782366819441644348, guid: 59e0968749a1bf046b3fed5d50565ce7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2579795
+      value: 0.622
       objectReference: {fileID: 0}
     - target: {fileID: 782366819441644348, guid: 59e0968749a1bf046b3fed5d50565ce7, type: 3}
       propertyPath: m_LocalPosition.z

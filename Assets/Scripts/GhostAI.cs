@@ -15,7 +15,6 @@ public class GhostAI : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
