@@ -1,0 +1,49 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Invisibility : MonoBehaviour
+{
+    public GameObject invisibleThing1;
+    public GameObject invisibleThing2;
+    public GameObject invisibleThing3;
+
+    public float invisibleCooldown = 10f;
+    public bool ableToPress = true;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        invisibleThing1.SetActive(true);
+        invisibleThing2.SetActive(true);
+        invisibleThing3.SetActive(true);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown("e"))
+        {
+            //PLAY GLASSES SOUND HERE
+            StartCoroutine(InvisibleReveal());
+        }
+    }
+
+    IEnumerator InvisibleReveal()
+    {
+        float timer = 0f;
+        while(timer < invisibleCooldown)
+        {
+            ableToPress = false;
+            invisibleThing1.SetActive(false);
+            invisibleThing2.SetActive(false);
+            invisibleThing3.SetActive(false);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        invisibleThing1.SetActive(true);
+        invisibleThing2.SetActive(true);
+        invisibleThing3.SetActive(true);
+        //PLAY GLASSES OFF SOUND HERE
+    }
+}
