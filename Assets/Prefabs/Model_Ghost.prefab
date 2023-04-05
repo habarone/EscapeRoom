@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 782366819441644348}
   - component: {fileID: 4428267616348413081}
   - component: {fileID: 1914217473868097619}
+  - component: {fileID: 7703384391770906058}
   m_Layer: 0
   m_Name: Model_Ghost
   m_TagString: Untagged
@@ -83,3 +84,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7703384391770906058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112685471002216838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a1fda90d31a764ebbca1c31c0a40bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  speed: 2
