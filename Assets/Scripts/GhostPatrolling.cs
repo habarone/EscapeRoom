@@ -7,10 +7,13 @@ public class GhostPatrolling : MonoBehaviour
     public Transform[] points;
     int current;
     public float speed;
+    public float originalSpeed;
+    public float freezeTime = 3;
     // Start is called before the first frame update
     void Start()
     {
         current = 0;
+        originalSpeed = speed;
     }
 
     // Update is called once per frame
@@ -25,5 +28,29 @@ public class GhostPatrolling : MonoBehaviour
         {
             current = (current + 1) % points.Length;
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "FreezeProjectile")
+        {
+            //PLAY GHOST FREEZE SOUND HERE
+            StartCoroutine(FreezingProcess());
+            Destroy(other.gameObject);
+            Debug.Log("Contact with ghost");
+        }
+    }
+
+    IEnumerator FreezingProcess()
+    {
+        float timer = 0f;
+        while(timer < freezeTime)
+        {
+            speed = 0;
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        //PLAY GHOST DEFROST HERE
+        speed = originalSpeed;
     }
 }
