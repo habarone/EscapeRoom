@@ -52,9 +52,10 @@ public class Collectibles : MonoBehaviour
 
         if(other.tag == "WinTV")
         {
-            if(HMCount == 3)
+            if(HMCount == 6)
             {
                 SceneManager.LoadScene("OfficeLevel");
+                Debug.Log("The next scene has been loaded. Applaud its supreme power.");
             }
         }
     }
