@@ -20,7 +20,6 @@ public class PlayerControllerEX : MonoBehaviour
     public TextMeshProUGUI lifeCount;
 
     public Animator animator;
-
     public Collectibles collectibleScript;
 
     public UnityEvent PlayerDeath;

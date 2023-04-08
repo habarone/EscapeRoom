@@ -7,6 +7,8 @@ public class Invisibility : MonoBehaviour
     public GameObject invisibleThing1;
     public GameObject invisibleThing2;
     public GameObject invisibleThing3;
+    public GameObject invisibleThing4;
+    public GameObject invisibleThing5;
 
     public float invisibleCooldown = 10f;
     public bool ableToPress = true;
@@ -17,6 +19,8 @@ public class Invisibility : MonoBehaviour
         invisibleThing1.SetActive(true);
         invisibleThing2.SetActive(true);
         invisibleThing3.SetActive(true);
+        invisibleThing4.SetActive(true);
+        invisibleThing5.SetActive(true);
     }
 
     // Update is called once per frame
@@ -38,12 +42,16 @@ public class Invisibility : MonoBehaviour
             invisibleThing1.SetActive(false);
             invisibleThing2.SetActive(false);
             invisibleThing3.SetActive(false);
+            invisibleThing4.SetActive(false);
+            invisibleThing5.SetActive(false);
             timer += Time.deltaTime;
             yield return null;
         }
         invisibleThing1.SetActive(true);
         invisibleThing2.SetActive(true);
         invisibleThing3.SetActive(true);
+        invisibleThing4.SetActive(true);
+        invisibleThing5.SetActive(true);
         //PLAY GLASSES OFF SOUND HERE
     }
 }
