@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Collectibles : MonoBehaviour
 {
     //ignore this, just for testing:
-    public int speed;
-    
     
     public int HMCount = 0;
     public TextMeshProUGUI HMText;
@@ -25,7 +24,7 @@ public class Collectibles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         HMText.text = "HMCount(changethis): " + HMCount.ToString();
+         HMText.text = "HMCount(changethis): " + (HMCount / 2).ToString();
 
         //ignore this, just for testing:
         /* if(Input.GetKey("w")){
@@ -49,6 +48,15 @@ public class Collectibles : MonoBehaviour
             Destroy(other.gameObject);
             Debug.Log("pog");
             //for audio add: audioSource.PlayOneShot(HMcountClip);
+        }
+
+        if(other.tag == "WinTV")
+        {
+            if(HMCount == 6)
+            {
+                SceneManager.LoadScene("OfficeLevel");
+                Debug.Log("The next scene has been loaded. Applaud its supreme power.");
+            }
         }
     }
 }

@@ -19,8 +19,7 @@ public class PlayerControllerEX : MonoBehaviour
     private bool isInvulnerable = false;
     public TextMeshProUGUI lifeCount;
 
-    public Animator animator;
-
+    Animator animator;
     public Collectibles collectibleScript;
 
     public UnityEvent PlayerDeath;
@@ -37,18 +36,31 @@ public class PlayerControllerEX : MonoBehaviour
         HandleMovementInput();
         HandleRotationInput();
         HandleShootInput();
-        if((!Input.GetKey("w")) && (!Input.GetKey("a")) && (!Input.GetKey("s")) && (!Input.GetKey("d")))
+        Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        if(targetVelocity.x != 0 || targetVelocity.z != 0)
         {
-            isMoving = false;
-            animator.SetBool("isWalking", false);
-           // Debug.Log("Player is not moving");
+            isMoving = true;
+            animator.SetInteger("State", 1);
+            Debug.Log("State is set to: " +  animator.GetInteger("State"));
         }
         else
         {
-            isMoving = true;
-            animator.SetBool("isWalking", true); 
-           // Debug.Log("Player is moving");
+            isMoving = false;
+            animator.SetInteger("State", 0);
+            Debug.Log("State is set to: " +  animator.GetInteger("State"));
         }
+    //    if((!Input.GetKey("w")) && (!Input.GetKey("a")) && (!Input.GetKey("s")) && (!Input.GetKey("d")))
+    //    {
+    //        isMoving = false;
+    //        animator.SetInteger("State", 0);
+    //        Debug.Log("State is set to: " +  animator.GetInteger("State"));
+    //    }
+    //    else
+    //    {
+    //        isMoving = true;
+    //        animator.SetInteger("State", 1); 
+    //        Debug.Log("State is set to: " +  animator.GetInteger("State"));
+    //    }
         if(!isMoving)
         {
             rb.velocity = Vector3.zero;
@@ -57,6 +69,7 @@ public class PlayerControllerEX : MonoBehaviour
         lifeCount.text = "Lives: " + lives.ToString();
         if(lives == 0)
         {
+            animator.SetInteger("State", 2);
             PlayerDeath.Invoke();
             //INSERT PLAYER DEATH ANIMATION HERE
             //PLAY DEATH SOUND HERE
