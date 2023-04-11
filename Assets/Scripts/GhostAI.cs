@@ -23,10 +23,12 @@ public class GhostAI : MonoBehaviour
         if(isFrozen == false)
         {
             ChasePlayer();
+           // Debug.Log("Not frozen");
         }
         else if(isFrozen == true)
         {
             StopMoving();
+            //Debug.Log("Is frozen");
         }
     }
 
@@ -34,6 +36,7 @@ public class GhostAI : MonoBehaviour
     {
         agent.isStopped = false;
         agent.SetDestination(player.position);
+        Debug.Log("ChasePlayer running");
     }
 
     private void StopMoving()

@@ -9,6 +9,7 @@ TagManager:
   - HMCollectible
   - FreezeProjectile
   - Enemy
+  - WinTV
   layers:
   - Default
   - TransparentFX
