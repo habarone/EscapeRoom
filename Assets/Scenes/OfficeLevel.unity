@@ -8121,6 +8121,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Model_Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4117433903098319332, guid: 0029451c7a02d6a44b0eb5d3f9deaf3e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9078274792846692008, guid: 0029451c7a02d6a44b0eb5d3f9deaf3e, type: 3}
       propertyPath: invisibleThing1
       value: 
@@ -17074,6 +17078,10 @@ PrefabInstance:
     - target: {fileID: 112685471002216838, guid: 59e0968749a1bf046b3fed5d50565ce7, type: 3}
       propertyPath: m_Name
       value: Model_Ghost
+      objectReference: {fileID: 0}
+    - target: {fileID: 112685471002216838, guid: 59e0968749a1bf046b3fed5d50565ce7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 782366819441644348, guid: 59e0968749a1bf046b3fed5d50565ce7, type: 3}
       propertyPath: m_RootOrder
