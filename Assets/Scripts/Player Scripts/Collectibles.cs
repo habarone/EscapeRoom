@@ -12,6 +12,9 @@ public class Collectibles : MonoBehaviour
     public int LRCount = 0;
     public int CSCount = 0;
     public TextMeshProUGUI CollectibleText;
+    public static bool HMDone = false;
+    public static bool LRDone = false;
+    public static bool CSDone = false;
     //for audio add:
     //public AudioSource audioSource; (audiosource should be added to player)
     //public AudioClip HMcountClip;
@@ -92,6 +95,7 @@ public class Collectibles : MonoBehaviour
                 if(GameObject.FindGameObjectsWithTag("HMCollectible") == null)
                 {
                     SceneManager.LoadScene("Office");
+                    HMDone = true;
                     Debug.Log("Returning to Office...");
                 }
             }
@@ -101,6 +105,7 @@ public class Collectibles : MonoBehaviour
                 if(GameObject.FindGameObjectsWithTag("LRCollectible") == null)
                 {
                     SceneManager.LoadScene("Office");
+                    LRDone = true;
                     Debug.Log("Returning to Office...");
                 }
             }
@@ -110,8 +115,17 @@ public class Collectibles : MonoBehaviour
                 if(GameObject.FindGameObjectsWithTag("CSCollectible") == null)
                 {
                     SceneManager.LoadScene("Office");
+                    CSDone = true;
                     Debug.Log("Returning to Office...");
                 }
+            }
+        }
+        if(other.tag == "WinTV")
+        {
+            if(HMDone && LRDone && CSDone)
+            {
+                //If win scene is different, rename scene here
+                SceneManager.LoadScene("WinScene");
             }
         }
 
