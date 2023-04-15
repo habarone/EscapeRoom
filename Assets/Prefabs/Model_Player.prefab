@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 1422813696}
   - component: {fileID: 1422813695}
   - component: {fileID: 1521233234141296490}
+  - component: {fileID: -7886253430103687753}
+  - component: {fileID: -5731577344544770020}
   m_Layer: 0
   m_Name: Model_Player
   m_TagString: Untagged
@@ -132,6 +134,35 @@ MonoBehaviour:
   PlayerDeath:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-7886253430103687753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4117433903098319332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97936449543d8db4caa2dc1cc9bd5642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tpmovement: 0
+--- !u!114 &-5731577344544770020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4117433903098319332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6225ec2be814a0b459cc9384c65382ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportPoint: {fileID: 0}
+  cooldown: 5
+  ableToPort: 1
+  coolingDown: 0
 --- !u!1001 &5810656462164526394
 PrefabInstance:
   m_ObjectHideFlags: 0
