@@ -10,6 +10,9 @@ TagManager:
   - FreezeProjectile
   - Enemy
   - WinTV
+  - HauntedMansionTV
+  - LivingRoomTV
+  - CookingShowTV
   layers:
   - Default
   - TransparentFX
