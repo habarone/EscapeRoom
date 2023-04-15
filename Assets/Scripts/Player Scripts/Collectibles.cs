@@ -24,7 +24,7 @@ public class Collectibles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         HMText.text = "HMCount(changethis): " + (HMCount / 2).ToString();
+         HMText.text = "TV Parts: " + (HMCount / 2).ToString();
 
         //ignore this, just for testing:
         /* if(Input.GetKey("w")){
