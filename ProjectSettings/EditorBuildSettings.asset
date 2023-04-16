@@ -9,8 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: ddb3bc4902a1b47419204978b9cf7069
   - enabled: 1
+    path: Assets/Scenes/OfficeLevel.unity
+    guid: 4db85a960dd08104cb95aaa2a8e1f5c7
+  - enabled: 1
     path: Assets/Scenes/HauntedMansion.unity
     guid: 05b387dced8e27640bfeb5e277d0a7e7
+  - enabled: 1
+    path: Assets/Scenes/LavaLevel.unity
+    guid: b3ad668b90ea4744b928cd79872c4bcc
+  - enabled: 1
+    path: Assets/Scenes/Kitchen.unity
+    guid: 03132f8585519a64da7a35d7bb26fde1
   - enabled: 1
     path: Assets/Scenes/WinScreen.unity
     guid: 2dab7c26bf706014aa56b16f6f5b2b34

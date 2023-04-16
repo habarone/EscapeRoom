@@ -41,13 +41,13 @@ public class PlayerControllerEX : MonoBehaviour
         {
             isMoving = true;
             animator.SetInteger("State", 1);
-            Debug.Log("State is set to: " +  animator.GetInteger("State"));
+            //Debug.Log("State is set to: " +  animator.GetInteger("State"));
         }
         else
         {
             isMoving = false;
             animator.SetInteger("State", 0);
-            Debug.Log("State is set to: " +  animator.GetInteger("State"));
+            //Debug.Log("State is set to: " +  animator.GetInteger("State"));
         }
     //    if((!Input.GetKey("w")) && (!Input.GetKey("a")) && (!Input.GetKey("s")) && (!Input.GetKey("d")))
     //    {

@@ -14,6 +14,7 @@ TagManager:
   - LivingRoomTV
   - CookingShowTV
   - CSCollectible
+  - HubTV
   layers:
   - Default
   - TransparentFX

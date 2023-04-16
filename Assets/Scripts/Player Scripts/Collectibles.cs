@@ -15,6 +15,10 @@ public class Collectibles : MonoBehaviour
     public static bool HMDone = false;
     public static bool LRDone = false;
     public static bool CSDone = false;
+
+    public static int HMScore = 0;
+    public static int LRScore = 0;
+    public static int CSScore = 0;
     //for audio add:
     //public AudioSource audioSource; (audiosource should be added to player)
     //public AudioClip HMcountClip;
@@ -34,7 +38,7 @@ public class Collectibles : MonoBehaviour
                 CollectibleText.text = "TV parts gathered: " + (HMCount / 2).ToString();
             }
             
-            if(SceneManager.GetSceneByName("LivingRoom").isLoaded)
+            if(SceneManager.GetSceneByName("LavaLevel").isLoaded)
             {   
                 CollectibleText.text = "Items gathered: " + (LRCount / 2).ToString();
             }
@@ -43,12 +47,18 @@ public class Collectibles : MonoBehaviour
             {
                 CollectibleText.text = "Ingredients gathered: " + (CSCount / 2).ToString();
             }
+        if(GameObject.FindGameObjectsWithTag("CSCollectible") == null)
+        {
+            Debug.Log("No more collectibles");
+        }
+        
     }
     
 
     void OnTriggerEnter(Collider other){
         if(other.tag == "HMCollectible"){
             HMCount += 1;
+            HMScore = HMCount / 2;
             Destroy(other.gameObject);
             Debug.Log("pog");
             //for audio add: audioSource.PlayOneShot(HMcountClip);
@@ -57,6 +67,7 @@ public class Collectibles : MonoBehaviour
         if(other.tag == "LRCollectible")
         {
             LRCount += 1;
+            LRScore = LRCount / 2;
             Destroy(other.gameObject);
             Debug.Log("pog");
         }
@@ -64,6 +75,7 @@ public class Collectibles : MonoBehaviour
         if(other.tag == "CSCollectible")
         {
             CSCount += 1;
+            CSScore = CSCount / 2;
             Destroy(other.gameObject);
             Debug.Log("pog");
         }
@@ -77,7 +89,7 @@ public class Collectibles : MonoBehaviour
         if(other.tag == "LivingRoomTV")
         {
             //IF NAME OF SCENE IS DIFFERENT, CHANGE HERE
-            SceneManager.LoadScene("LivingRoom");
+            SceneManager.LoadScene("LavaLevel");
             Debug.Log("Loading Living Room...");
         }
 
@@ -92,19 +104,20 @@ public class Collectibles : MonoBehaviour
             //IF NAME OF SCENE IS DIFFERENT, CHANGE HERE
             if(SceneManager.GetSceneByName("HauntedMansion").isLoaded)
             {
-                if(GameObject.FindGameObjectsWithTag("HMCollectible") == null)
+                Debug.Log("MANSION IS LOADED");
+                if(GameObject.FindWithTag("HMCollectible") == null)
                 {
-                    SceneManager.LoadScene("Office");
+                    SceneManager.LoadScene("OfficeLevel");
                     HMDone = true;
                     Debug.Log("Returning to Office...");
                 }
             }
             
-            if(SceneManager.GetSceneByName("LivingRoom").isLoaded)
+            if(SceneManager.GetSceneByName("LavaLevel").isLoaded)
             {
-                if(GameObject.FindGameObjectsWithTag("LRCollectible") == null)
+                if(GameObject.FindWithTag("LRCollectible") == null)
                 {
-                    SceneManager.LoadScene("Office");
+                    SceneManager.LoadScene("OfficeLevel");
                     LRDone = true;
                     Debug.Log("Returning to Office...");
                 }
@@ -112,9 +125,9 @@ public class Collectibles : MonoBehaviour
 
             if(SceneManager.GetSceneByName("Kitchen").isLoaded)
             {
-                if(GameObject.FindGameObjectsWithTag("CSCollectible") == null)
+                if(GameObject.FindWithTag("CSCollectible") == null)
                 {
-                    SceneManager.LoadScene("Office");
+                    SceneManager.LoadScene("OfficeLevel");
                     CSDone = true;
                     Debug.Log("Returning to Office...");
                 }
@@ -125,7 +138,7 @@ public class Collectibles : MonoBehaviour
             if(HMDone && LRDone && CSDone)
             {
                 //If win scene is different, rename scene here
-                SceneManager.LoadScene("WinScene");
+                SceneManager.LoadScene("WinScreen");
             }
         }
 
