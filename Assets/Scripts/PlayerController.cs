@@ -57,15 +57,15 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-        rb.MovePosition(transform.position + (transform.forward * input.magnitude) * speed * Time.deltaTime);
+       // rb.MovePosition(transform.position + (transform.forward * input.magnitude) * speed * Time.deltaTime);
     }
 
     void Launch()
     {
-        GameObject projectileObject = Instantiate(projectilePrefab, rb.position + Vector3.up * 0.5f, Quaternion.identity);
+       // GameObject projectileObject = Instantiate(projectilePrefab, rb.position + Vector3.up * 0.5f, Quaternion.identity);
 
-        FreezeRay freezeBolt = projectileObject.GetComponent<FreezeRay>();
-        freezeBolt.Launch(lookDirection, 300);
+      //  FreezeRay freezeBolt = projectileObject.GetComponent<FreezeRay>();
+      //  freezeBolt.Launch(lookDirection, 300);
 
     }
 }
