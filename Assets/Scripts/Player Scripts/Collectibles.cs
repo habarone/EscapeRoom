@@ -9,7 +9,12 @@ public class Collectibles : MonoBehaviour
     //ignore this, just for testing:
     
     public int HMCount = 0;
-    public TextMeshProUGUI HMText;
+    public int LRCount = 0;
+    public int CSCount = 0;
+    public TextMeshProUGUI CollectibleText;
+    public static bool HMDone = false;
+    public static bool LRDone = false;
+    public static bool CSDone = false;
     //for audio add:
     //public AudioSource audioSource; (audiosource should be added to player)
     //public AudioClip HMcountClip;
@@ -24,21 +29,20 @@ public class Collectibles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         HMText.text = "HMCount(changethis): " + (HMCount / 2).ToString();
+        if(SceneManager.GetSceneByName("HauntedMansion").isLoaded)
+            {
+                CollectibleText.text = "TV parts remaining: " + HMCount.ToString();
+            }
+            
+            if(SceneManager.GetSceneByName("LivingRoom").isLoaded)
+            {   
+                CollectibleText.text = "Items remaining: " + LRCount.ToString();
+            }
 
-        //ignore this, just for testing:
-        /* if(Input.GetKey("w")){
-                transform.Translate((Vector2.up * speed )/ 100);
+            if(SceneManager.GetSceneByName("CookingShow").isLoaded)
+            {
+                CollectibleText.text = "Ingredients remaining: " + CSCount.ToString();
             }
-        if(Input.GetKey("a")){
-                transform.Translate((Vector2.left * speed )/ 100);
-            }
-        if(Input.GetKey("s")){
-                transform.Translate((Vector2.down * speed )/ 100);
-            }
-        if(Input.GetKey("d")){
-                transform.Translate((Vector2.right * speed )/ 100);
-            } */
     }
     
 
@@ -50,13 +54,80 @@ public class Collectibles : MonoBehaviour
             //for audio add: audioSource.PlayOneShot(HMcountClip);
         }
 
-        if(other.tag == "WinTV")
+        if(other.tag == "LRCollectible")
         {
-            if(HMCount == 6)
+            LRCount += 1;
+            Destroy(other.gameObject);
+            Debug.Log("pog");
+        }
+
+        if(other.tag == "CSCollectible")
+        {
+            CSCount += 1;
+            Destroy(other.gameObject);
+            Debug.Log("pog");
+        }
+
+        if(other.tag == "HauntedMansionTV")
+        {
+            SceneManager.LoadScene("HauntedMansion");
+            Debug.Log("Loading Haunted Mansion...");
+        }
+
+        if(other.tag == "LivingRoomTV")
+        {
+            //IF NAME OF SCENE IS DIFFERENT, CHANGE HERE
+            SceneManager.LoadScene("LivingRoom");
+            Debug.Log("Loading Living Room...");
+        }
+
+        if(other.tag == "CookingShowTV")
+        {
+            //IF NAME OF SCENE IS DIFFERENT, CHANGE HERE
+            SceneManager.LoadScene("CookingShow");
+            Debug.Log("Loading Cooking Show...");
+        }
+        if(other.tag == "HubTV")
+        {
+            //IF NAME OF SCENE IS DIFFERENT, CHANGE HERE
+            if(SceneManager.GetSceneByName("HauntedMansion").isLoaded)
             {
-                SceneManager.LoadScene("OfficeLevel");
-                Debug.Log("The next scene has been loaded. Applaud its supreme power.");
+                if(GameObject.FindGameObjectsWithTag("HMCollectible") == null)
+                {
+                    SceneManager.LoadScene("Office");
+                    HMDone = true;
+                    Debug.Log("Returning to Office...");
+                }
+            }
+            
+            if(SceneManager.GetSceneByName("LivingRoom").isLoaded)
+            {
+                if(GameObject.FindGameObjectsWithTag("LRCollectible") == null)
+                {
+                    SceneManager.LoadScene("Office");
+                    LRDone = true;
+                    Debug.Log("Returning to Office...");
+                }
+            }
+
+            if(SceneManager.GetSceneByName("CookingShow").isLoaded)
+            {
+                if(GameObject.FindGameObjectsWithTag("CSCollectible") == null)
+                {
+                    SceneManager.LoadScene("Office");
+                    CSDone = true;
+                    Debug.Log("Returning to Office...");
+                }
             }
         }
+        if(other.tag == "WinTV")
+        {
+            if(HMDone && LRDone && CSDone)
+            {
+                //If win scene is different, rename scene here
+                SceneManager.LoadScene("WinScene");
+            }
+        }
+
     }
 }
