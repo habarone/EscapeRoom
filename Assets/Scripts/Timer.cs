@@ -9,13 +9,15 @@ public TextMeshProUGUI timerText;
 private int timeint;
 private float timesecs = 61;
 
-void Update(){
-timeint = (int)timesecs;
-timerText.text = timeint.ToString();
-timer();
-if(timesecs == 0)
+void Update()
 {
-    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    timeint = (int)timesecs;
+    timerText.text = timeint.ToString();
+    timer();
+    if(timeint == 0)
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Debug.Log("Time is out, buddy boy");
 }
 }
 
