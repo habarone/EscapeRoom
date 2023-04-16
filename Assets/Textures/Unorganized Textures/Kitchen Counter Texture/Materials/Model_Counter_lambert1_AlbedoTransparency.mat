@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Model_Small_Sofa_lambert1_AlbedoTransparency
+  m_Name: Model_Counter_lambert1_AlbedoTransparency
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords:
   - _METALLICGLOSSMAP
@@ -23,7 +23,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 59a251aa57c50844b90a3a0c77a3a0e7, type: 3}
+        m_Texture: {fileID: 2800000, guid: a6d1706dd2eae2143b642968e2172bd1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -43,11 +43,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b836cd718b337a94cb16e4fe6491ea94, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1d8d37a64b3bdf849b285c92fd47a9b9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: e0db00771dbf4c64798c8564e994580d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 56bc39e667e58b642b355f85f56daa11, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
