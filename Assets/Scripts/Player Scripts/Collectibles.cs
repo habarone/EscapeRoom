@@ -31,17 +31,17 @@ public class Collectibles : MonoBehaviour
     {
         if(SceneManager.GetSceneByName("HauntedMansion").isLoaded)
             {
-                CollectibleText.text = "TV parts remaining: " + HMCount.ToString();
+                CollectibleText.text = "TV parts gathered: " + (HMCount / 2).ToString();
             }
             
             if(SceneManager.GetSceneByName("LivingRoom").isLoaded)
             {   
-                CollectibleText.text = "Items remaining: " + LRCount.ToString();
+                CollectibleText.text = "Items gathered: " + (LRCount / 2).ToString();
             }
 
-            if(SceneManager.GetSceneByName("CookingShow").isLoaded)
+            if(SceneManager.GetSceneByName("Kitchen").isLoaded)
             {
-                CollectibleText.text = "Ingredients remaining: " + CSCount.ToString();
+                CollectibleText.text = "Ingredients gathered: " + (CSCount / 2).ToString();
             }
     }
     
@@ -84,7 +84,7 @@ public class Collectibles : MonoBehaviour
         if(other.tag == "CookingShowTV")
         {
             //IF NAME OF SCENE IS DIFFERENT, CHANGE HERE
-            SceneManager.LoadScene("CookingShow");
+            SceneManager.LoadScene("Kitchen");
             Debug.Log("Loading Cooking Show...");
         }
         if(other.tag == "HubTV")
@@ -110,7 +110,7 @@ public class Collectibles : MonoBehaviour
                 }
             }
 
-            if(SceneManager.GetSceneByName("CookingShow").isLoaded)
+            if(SceneManager.GetSceneByName("Kitchen").isLoaded)
             {
                 if(GameObject.FindGameObjectsWithTag("CSCollectible") == null)
                 {
