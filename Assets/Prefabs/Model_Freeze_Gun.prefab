@@ -756,6 +756,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8316876869339150970}
+  - component: {fileID: 8428874879434891818}
   m_Layer: 0
   m_Name: Model_Freeze_Gun
   m_TagString: Untagged
@@ -772,8 +773,8 @@ Transform:
   m_GameObject: {fileID: 8656107454703018176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.329, y: 0.129, z: 9.681}
-  m_LocalScale: {x: 0.0043432, y: 0.0043432, z: 0.0043432}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.0027, y: 0.0027, z: 0.0027}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6220181423195278773}
   - {fileID: 1967850440030280922}
@@ -788,6 +789,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8428874879434891818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8656107454703018176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef3c94d52b733b34d87f18ade73cc7d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firingPoint: {fileID: 0}
+  projectilePrefab: {fileID: 7497097740064947990, guid: 90e8594cc551cfe4d9c51d9b6edc8b69, type: 3}
+  firingSpeed: 0
 --- !u!1 &8920941822008519625
 GameObject:
   m_ObjectHideFlags: 0
