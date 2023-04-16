@@ -1451,7 +1451,7 @@ GameObject:
   - component: {fileID: 288615828}
   m_Layer: 0
   m_Name: Player Model
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1557,6 +1557,7 @@ MonoBehaviour:
   cooldown: 5
   ableToPort: 1
   coolingDown: 0
+  teleportClip: {fileID: 0}
 --- !u!136 &7036643718154934912
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1606,6 +1607,7 @@ MonoBehaviour:
   invisibleThing5: {fileID: 0}
   invisibleCooldown: 10
   ableToPress: 1
+  invisibleClip: {fileID: 8300000, guid: a1f6210cafebee14cb2c62de2a01fa77, type: 3}
 --- !u!1 &7763090010265945281
 GameObject:
   m_ObjectHideFlags: 0
