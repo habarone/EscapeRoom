@@ -16,6 +16,8 @@ public class PlayerGun : MonoBehaviour
     public static PlayerGun Instance;
 
     private float lastTimeShot = 0;
+    AudioSource audioSource;
+    public AudioClip shootClip;
 
     void Awake()
     {
@@ -28,6 +30,7 @@ public class PlayerGun : MonoBehaviour
         {
             lastTimeShot = Time.time;
             Instantiate(projectilePrefab, firingPoint.position, firingPoint.rotation);
+            audioSource.PlayOneShot(shootClip);
         }
         
     }
