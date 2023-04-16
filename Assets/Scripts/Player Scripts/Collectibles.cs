@@ -115,12 +115,9 @@ public class Collectibles : MonoBehaviour
             
             if(SceneManager.GetSceneByName("LavaLevel").isLoaded)
             {
-                if(GameObject.FindWithTag("LRCollectible") == null)
-                {
-                    SceneManager.LoadScene("OfficeLevel");
-                    LRDone = true;
-                    Debug.Log("Returning to Office...");
-                }
+                SceneManager.LoadScene("OfficeLevel");
+                LRDone = true;
+                Debug.Log("Returning to Office...");
             }
 
             if(SceneManager.GetSceneByName("Kitchen").isLoaded)

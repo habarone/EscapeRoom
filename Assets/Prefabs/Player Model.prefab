@@ -1380,6 +1380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7148251484245245216}
+  - component: {fileID: 2334466562116555798}
   - component: {fileID: 3878615290571220826}
   - component: {fileID: 7257842888037358427}
   - component: {fileID: 350170395404814090}
@@ -1417,6 +1418,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2334466562116555798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7527872839373350810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300a9be0f2530de45822670b8d480292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HMCount: 0
+  LRCount: 0
+  CSCount: 0
+  CollectibleText: {fileID: 0}
 --- !u!95 &3878615290571220826
 Animator:
   serializedVersion: 4
@@ -1456,7 +1473,7 @@ MonoBehaviour:
   lives: 3
   ghostDamage: 1
   lifeCount: {fileID: 0}
-  collectibleScript: {fileID: 0}
+  collectibleScript: {fileID: 2334466562116555798}
   PlayerDeath:
     m_PersistentCalls:
       m_Calls: []

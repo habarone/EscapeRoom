@@ -15,6 +15,7 @@ TagManager:
   - CookingShowTV
   - CSCollectible
   - HubTV
+  - Fire
   layers:
   - Default
   - TransparentFX

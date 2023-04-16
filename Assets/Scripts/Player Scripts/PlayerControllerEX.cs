@@ -123,6 +123,11 @@ public class PlayerControllerEX : MonoBehaviour
                  SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
+
+        if(other.gameObject.tag == "Fire")
+        {
+            GetDamaged();
+        }
     }
 
     void GetDamaged()
