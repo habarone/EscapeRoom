@@ -1706,7 +1706,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Model
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 891200171, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
 --- !u!1 &72912331 stripped
 GameObject:
@@ -23316,6 +23317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1347988691}
+  cheatsMenuUI: {fileID: 0}
 --- !u!114 &1213106675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36597,7 +36599,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

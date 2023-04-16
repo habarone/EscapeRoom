@@ -13,6 +13,9 @@ public class Invisibility : MonoBehaviour
     public float invisibleCooldown = 10f;
     public bool ableToPress = true;
 
+    AudioSource audioSource;
+    public AudioClip invisibleClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,7 @@ public class Invisibility : MonoBehaviour
         invisibleThing3.SetActive(true);
         invisibleThing4.SetActive(true);
         invisibleThing5.SetActive(true);
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,7 +32,7 @@ public class Invisibility : MonoBehaviour
     {
         if (Input.GetKeyDown("e"))
         {
-            //PLAY GLASSES SOUND HERE
+            audioSource.PlayOneShot(invisibleClip);
             StartCoroutine(InvisibleReveal());
         }
     }

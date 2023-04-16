@@ -15241,6 +15241,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 288615828, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
+      propertyPath: teleportClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 402cdea30f689f340acafc19980ac3bd, type: 3}
+    - target: {fileID: 288615828, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
+      propertyPath: invisibleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 402cdea30f689f340acafc19980ac3bd, type: 3}
+    - target: {fileID: 288615828, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
       propertyPath: invisibleThing1
       value: 
       objectReference: {fileID: 2095723388}
@@ -15252,6 +15260,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.019
       objectReference: {fileID: 0}
+    - target: {fileID: 1390334861419199812, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
+      propertyPath: teleportClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a1f6210cafebee14cb2c62de2a01fa77, type: 3}
     - target: {fileID: 7148251484245245216, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -15309,6 +15321,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7257842888037358427, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1773109303}
+    - target: {fileID: 7257842888037358427, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
       propertyPath: movementSpeed
       value: 1.5
       objectReference: {fileID: 0}
@@ -15320,7 +15336,8 @@ PrefabInstance:
       propertyPath: shootClip
       value: 
       objectReference: {fileID: 8300000, guid: a53c6f2b46c036d4f8c5014ecc97bdf3, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 891200171, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
 --- !u!1 &799797785 stripped
 GameObject:
@@ -17114,6 +17131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 64973647}
+  cheatsMenuUI: {fileID: 0}
 --- !u!114 &883254594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33906,7 +33924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba68a924f8057154fbd1f91e1dfdeefa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 5
+  range: 1
   tpScript: {fileID: 1773109295}
 --- !u!114 &1773109300
 MonoBehaviour:
@@ -34017,6 +34035,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!54 &1773109303 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 288615827, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
+  m_PrefabInstance: {fileID: 792041822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1774285813 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8209007722778674173, guid: 6c2f6ffb346687a4e9557e022961aae0, type: 3}
