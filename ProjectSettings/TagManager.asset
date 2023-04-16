@@ -13,6 +13,7 @@ TagManager:
   - HauntedMansionTV
   - LivingRoomTV
   - CookingShowTV
+  - CSCollectible
   layers:
   - Default
   - TransparentFX
