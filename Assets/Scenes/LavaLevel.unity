@@ -1886,7 +1886,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1078344398}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &275146190
 PrefabInstance:
@@ -3338,7 +3338,7 @@ Transform:
   - {fileID: 1987035019}
   - {fileID: 208886663}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &449914297
 BoxCollider:
@@ -7892,6 +7892,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 136276952139473560, guid: 0029451c7a02d6a44b0eb5d3f9deaf3e, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 136276952139473560, guid: 0029451c7a02d6a44b0eb5d3f9deaf3e, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f1fe7f844910b1b41bf59e5497bf90a8, type: 3}
     - target: {fileID: 1218491802315567530, guid: 0029451c7a02d6a44b0eb5d3f9deaf3e, type: 3}
       propertyPath: firingPoint
       value: 
@@ -7918,7 +7926,7 @@ PrefabInstance:
       objectReference: {fileID: 273322252}
     - target: {fileID: 3634335618359823198, guid: 0029451c7a02d6a44b0eb5d3f9deaf3e, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3634335618359823198, guid: 0029451c7a02d6a44b0eb5d3f9deaf3e, type: 3}
       propertyPath: m_LocalScale.x
@@ -10443,6 +10451,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c2f6ffb346687a4e9557e022961aae0, type: 3}
+--- !u!1 &1435483675 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fa0d109a022980c4ea02515ee736d6e1, type: 3}
+  m_PrefabInstance: {fileID: 1635765155}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1435483679
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435483675}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 314.26416, y: 197.23163, z: 172.50768}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1451205447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10994,6 +11020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1993880723}
+  cheatsMenuUI: {fileID: 0}
 --- !u!114 &1509400896
 MonoBehaviour:
   m_ObjectHideFlags: 0
