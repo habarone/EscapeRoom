@@ -16,9 +16,17 @@ public class Collectibles : MonoBehaviour
     public static bool LRDone = false;
     public static bool CSDone = false;
 
+    public bool mansionDone;
+    public bool roomDone;
+    public bool kitchenDone;
+
     public static int HMScore = 0;
     public static int LRScore = 0;
     public static int CSScore = 0;
+
+    public GameObject sparkle1;
+    public GameObject sparkle2;
+    public GameObject sparkle3;
     //for audio add:
     //public AudioSource audioSource; (audiosource should be added to player)
     //public AudioClip HMcountClip;
@@ -26,6 +34,9 @@ public class Collectibles : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sparkle1.SetActive(false);
+        sparkle2.SetActive(false);
+        sparkle3.SetActive(false);
         //use if text is not showing a number on start up:
         //HMText.text = "HMCount(changethis): 0";
     }
@@ -33,6 +44,9 @@ public class Collectibles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        HMDone = mansionDone;
+        LRDone = roomDone;
+        CSDone = kitchenDone;
         if(SceneManager.GetSceneByName("HauntedMansion").isLoaded)
             {
                 CollectibleText.text = "TV parts gathered: " + (HMCount / 2).ToString();
@@ -50,6 +64,18 @@ public class Collectibles : MonoBehaviour
         if(GameObject.FindGameObjectsWithTag("CSCollectible") == null)
         {
             Debug.Log("No more collectibles");
+        }
+        if(HMDone)
+        {
+            sparkle1.SetActive(true);
+        }
+        if(LRDone)
+        {
+            sparkle2.SetActive(true);
+        }
+        if(CSDone)
+        {
+            sparkle3.SetActive(true);
         }
         
     }

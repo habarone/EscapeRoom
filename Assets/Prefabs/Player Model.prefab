@@ -1498,6 +1498,12 @@ MonoBehaviour:
   LRCount: 0
   CSCount: 0
   CollectibleText: {fileID: 0}
+  mansionDone: 0
+  roomDone: 0
+  kitchenDone: 0
+  sparkle1: {fileID: 0}
+  sparkle2: {fileID: 0}
+  sparkle3: {fileID: 0}
 --- !u!95 &3878615290571220826
 Animator:
   serializedVersion: 4
@@ -1557,7 +1563,7 @@ MonoBehaviour:
   cooldown: 5
   ableToPort: 1
   coolingDown: 0
-  teleportClip: {fileID: 0}
+  teleportClip: {fileID: 8300000, guid: a1f6210cafebee14cb2c62de2a01fa77, type: 3}
 --- !u!136 &7036643718154934912
 CapsuleCollider:
   m_ObjectHideFlags: 0
