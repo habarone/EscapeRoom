@@ -9252,7 +9252,7 @@ PrefabInstance:
     - target: {fileID: 3698940364953487897, guid: 0029451c7a02d6a44b0eb5d3f9deaf3e, type: 3}
       propertyPath: lifeCount
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1009346089}
     - target: {fileID: 3698940364953487897, guid: 0029451c7a02d6a44b0eb5d3f9deaf3e, type: 3}
       propertyPath: movementSpeed
       value: 3
