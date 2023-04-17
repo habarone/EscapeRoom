@@ -32,7 +32,7 @@ public class Invisibility : MonoBehaviour
     {
         if (Input.GetKeyDown("e"))
         {
-            audioSource.PlayOneShot(invisibleClip);
+            // audioSource.PlayOneShot(invisibleClip);
             StartCoroutine(InvisibleReveal());
         }
     }
@@ -40,7 +40,7 @@ public class Invisibility : MonoBehaviour
     IEnumerator InvisibleReveal()
     {
         float timer = 0f;
-        while(timer < invisibleCooldown)
+        while (timer < invisibleCooldown)
         {
             ableToPress = false;
             invisibleThing1.SetActive(false);

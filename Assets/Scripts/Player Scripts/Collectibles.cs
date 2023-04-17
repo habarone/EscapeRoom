@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Collectibles : MonoBehaviour
 {
     //ignore this, just for testing:
-    
+
     public int HMCount = 0;
     public int LRCount = 0;
     public int CSCount = 0;
@@ -44,45 +44,47 @@ public class Collectibles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HMDone = mansionDone;
-        LRDone = roomDone;
-        CSDone = kitchenDone;
-        if(SceneManager.GetSceneByName("HauntedMansion").isLoaded)
-            {
-                CollectibleText.text = "TV parts gathered: " + (HMCount / 2).ToString();
-            }
-            
-            if(SceneManager.GetSceneByName("LavaLevel").isLoaded)
-            {   
-                CollectibleText.text = "Items gathered: " + (LRCount / 2).ToString();
-            }
+        // HMDone = mansionDone;
+        // LRDone = roomDone;
+        // CSDone = kitchenDone;
+        if (SceneManager.GetSceneByName("HauntedMansion").isLoaded)
+        {
+            CollectibleText.text = "TV parts gathered: " + (HMCount).ToString();
+        }
 
-            if(SceneManager.GetSceneByName("Kitchen").isLoaded)
-            {
-                CollectibleText.text = "Ingredients gathered: " + (CSCount / 2).ToString();
-            }
-        if(GameObject.FindGameObjectsWithTag("CSCollectible") == null)
+        if (SceneManager.GetSceneByName("LavaLevel").isLoaded)
+        {
+            CollectibleText.text = "Items gathered: " + (LRCount).ToString();
+        }
+
+        if (SceneManager.GetSceneByName("Kitchen").isLoaded)
+        {
+            CollectibleText.text = "Ingredients gathered: " + (CSCount).ToString();
+        }
+        if (GameObject.FindGameObjectsWithTag("CSCollectible") == null)
         {
             Debug.Log("No more collectibles");
         }
-        if(HMDone)
+        if (HMDone)
         {
             sparkle1.SetActive(true);
         }
-        if(LRDone)
+        if (LRDone)
         {
             sparkle2.SetActive(true);
         }
-        if(CSDone)
+        if (CSDone)
         {
             sparkle3.SetActive(true);
         }
-        
-    }
-    
 
-    void OnTriggerEnter(Collider other){
-        if(other.tag == "HMCollectible"){
+    }
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "HMCollectible")
+        {
             HMCount += 1;
             HMScore = HMCount / 2;
             Destroy(other.gameObject);
@@ -90,7 +92,7 @@ public class Collectibles : MonoBehaviour
             //for audio add: audioSource.PlayOneShot(HMcountClip);
         }
 
-        if(other.tag == "LRCollectible")
+        if (other.tag == "LRCollectible")
         {
             LRCount += 1;
             LRScore = LRCount / 2;
@@ -98,7 +100,7 @@ public class Collectibles : MonoBehaviour
             Debug.Log("pog");
         }
 
-        if(other.tag == "CSCollectible")
+        if (other.tag == "CSCollectible")
         {
             CSCount += 1;
             CSScore = CSCount / 2;
@@ -106,49 +108,49 @@ public class Collectibles : MonoBehaviour
             Debug.Log("pog");
         }
 
-        if(other.tag == "HauntedMansionTV")
+        if (other.tag == "HauntedMansionTV")
         {
             SceneManager.LoadScene("HauntedMansion");
             Debug.Log("Loading Haunted Mansion...");
         }
 
-        if(other.tag == "LivingRoomTV")
+        if (other.tag == "LivingRoomTV")
         {
             //IF NAME OF SCENE IS DIFFERENT, CHANGE HERE
             SceneManager.LoadScene("LavaLevel");
             Debug.Log("Loading Living Room...");
         }
 
-        if(other.tag == "CookingShowTV")
+        if (other.tag == "CookingShowTV")
         {
             //IF NAME OF SCENE IS DIFFERENT, CHANGE HERE
             SceneManager.LoadScene("Kitchen");
             Debug.Log("Loading Cooking Show...");
         }
-        if(other.tag == "HubTV")
+        if (other.tag == "HubTV")
         {
             //IF NAME OF SCENE IS DIFFERENT, CHANGE HERE
-            if(SceneManager.GetSceneByName("HauntedMansion").isLoaded)
+            if (SceneManager.GetSceneByName("HauntedMansion").isLoaded)
             {
                 Debug.Log("MANSION IS LOADED");
-                if(GameObject.FindWithTag("HMCollectible") == null)
+                if (GameObject.FindWithTag("HMCollectible") == null)
                 {
                     SceneManager.LoadScene("OfficeLevel");
                     HMDone = true;
                     Debug.Log("Returning to Office...");
                 }
             }
-            
-            if(SceneManager.GetSceneByName("LavaLevel").isLoaded)
+
+            if (SceneManager.GetSceneByName("LavaLevel").isLoaded)
             {
                 SceneManager.LoadScene("OfficeLevel");
                 LRDone = true;
                 Debug.Log("Returning to Office...");
             }
 
-            if(SceneManager.GetSceneByName("Kitchen").isLoaded)
+            if (SceneManager.GetSceneByName("Kitchen").isLoaded)
             {
-                if(GameObject.FindWithTag("CSCollectible") == null)
+                if (GameObject.FindWithTag("CSCollectible") == null)
                 {
                     SceneManager.LoadScene("OfficeLevel");
                     CSDone = true;
@@ -156,9 +158,9 @@ public class Collectibles : MonoBehaviour
                 }
             }
         }
-        if(other.tag == "WinTV")
+        if (other.tag == "WinTV")
         {
-            if(HMDone && LRDone && CSDone)
+            if (HMDone && LRDone && CSDone)
             {
                 //If win scene is different, rename scene here
                 SceneManager.LoadScene("WinScreen");

@@ -15000,6 +15000,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3128634769430321091, guid: 4a51fe633dd377947ad78ec46c7990cd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7738336154719042775, guid: 4a51fe633dd377947ad78ec46c7990cd, type: 3}
       propertyPath: m_Name
       value: Fire Effect
@@ -15167,6 +15171,10 @@ PrefabInstance:
     - target: {fileID: 1402964097, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.019
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390334861419199812, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
+      propertyPath: cooldown
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1390334861419199812, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
       propertyPath: teleportClip

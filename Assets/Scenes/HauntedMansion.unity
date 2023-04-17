@@ -23175,6 +23175,10 @@ PrefabInstance:
       propertyPath: invisibleThing5
       value: 
       objectReference: {fileID: 1014554093}
+    - target: {fileID: 1390334861419199812, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
+      propertyPath: cooldown
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2334466562116555798, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
       propertyPath: CollectibleText
       value: 
