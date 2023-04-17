@@ -32,7 +32,7 @@ public class Invisibility : MonoBehaviour
     {
         if (Input.GetKeyDown("e"))
         {
-            audioSource.PlayOneShot(invisibleClip);
+            //audioSource.PlayOneShot(invisibleClip);
             StartCoroutine(InvisibleReveal());
         }
     }

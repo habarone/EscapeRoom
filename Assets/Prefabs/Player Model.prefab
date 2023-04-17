@@ -1547,7 +1547,11 @@ GameObject:
   - component: {fileID: 7036643718154934912}
   - component: {fileID: 288615827}
   - component: {fileID: 288615828}
+<<<<<<< Updated upstream
   - component: {fileID: 104174533}
+=======
+  - component: {fileID: 3703690360313181140}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Player Model
   m_TagString: Player
@@ -1659,7 +1663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportPoint: {fileID: 1402964096}
-  cooldown: 5
+  cooldown: 2
   ableToPort: 1
   coolingDown: 0
   teleportClip: {fileID: 8300000, guid: a1f6210cafebee14cb2c62de2a01fa77, type: 3}
@@ -1713,14 +1717,20 @@ MonoBehaviour:
   invisibleCooldown: 10
   ableToPress: 1
   invisibleClip: {fileID: 8300000, guid: a1f6210cafebee14cb2c62de2a01fa77, type: 3}
+<<<<<<< Updated upstream
 --- !u!82 &104174533
 AudioSource:
+=======
+--- !u!114 &3703690360313181140
+MonoBehaviour:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7527872839373350810}
   m_Enabled: 1
+<<<<<<< Updated upstream
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f1fe7f844910b1b41bf59e5497bf90a8, type: 3}
@@ -1809,6 +1819,14 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+=======
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba68a924f8057154fbd1f91e1dfdeefa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 5
+  tpScript: {fileID: 1390334861419199812}
+>>>>>>> Stashed changes
 --- !u!1 &7763090010265945281
 GameObject:
   m_ObjectHideFlags: 0
