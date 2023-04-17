@@ -124,7 +124,7 @@ public class PlayerControllerEX : MonoBehaviour
             }
         }
 
-        if(other.gameObject.tag == "Fire")
+        if(other.gameObject.tag == "Freezable")
         {
             GetDamaged();
         }
