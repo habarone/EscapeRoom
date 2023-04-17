@@ -24,6 +24,7 @@ public class PlayerController2 : MonoBehaviour
 
     public UnityEvent PlayerDeath;
 
+
     void Start()
     {
         speed = movementSpeed;
@@ -33,11 +34,12 @@ public class PlayerController2 : MonoBehaviour
 
     void Update()
     {
+
         HandleMovementInput();
         HandleRotationInput();
         HandleShootInput();
         Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        if(targetVelocity.x != 0 || targetVelocity.z != 0)
+        if (targetVelocity.x != 0 || targetVelocity.z != 0)
         {
             isMoving = true;
             animator.SetBool("isWalking", true);
@@ -51,25 +53,25 @@ public class PlayerController2 : MonoBehaviour
             //  animator.SetInteger("State", 0);
             //  Debug.Log("State is set to: " +  animator.GetInteger("State"));
         }
-    //    if((!Input.GetKey("w")) && (!Input.GetKey("a")) && (!Input.GetKey("s")) && (!Input.GetKey("d")))
-    //    {
-    //        isMoving = false;
-    //        animator.SetInteger("State", 0);
-    //        Debug.Log("State is set to: " +  animator.GetInteger("State"));
-    //    }
-    //    else
-    //    {
-    //        isMoving = true;
-    //        animator.SetInteger("State", 1); 
-    //        Debug.Log("State is set to: " +  animator.GetInteger("State"));
-    //    }
-        if(!isMoving)
+        //    if((!Input.GetKey("w")) && (!Input.GetKey("a")) && (!Input.GetKey("s")) && (!Input.GetKey("d")))
+        //    {
+        //        isMoving = false;
+        //        animator.SetInteger("State", 0);
+        //        Debug.Log("State is set to: " +  animator.GetInteger("State"));
+        //    }
+        //    else
+        //    {
+        //        isMoving = true;
+        //        animator.SetInteger("State", 1); 
+        //        Debug.Log("State is set to: " +  animator.GetInteger("State"));
+        //    }
+        if (!isMoving)
         {
             rb.velocity = Vector3.zero;
         }
 
         lifeCount.text = "Lives: " + lives.ToString();
-        if(lives == 0)
+        if (lives == 0)
         {
             // animator.SetInteger("State", 2);
             animator.SetBool("isDead", true);
@@ -97,7 +99,7 @@ public class PlayerController2 : MonoBehaviour
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if(Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit))
         {
             transform.LookAt(new Vector3(hit.point.x, transform.position.y, hit.point.z));
         }
@@ -105,7 +107,7 @@ public class PlayerController2 : MonoBehaviour
 
     void HandleShootInput()
     {
-        if(Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire1"))
         {
             //INSERT SHOOTING ANIMATION HERE
             //PLAY SHOOT SOUND HERE
@@ -115,15 +117,15 @@ public class PlayerController2 : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Enemy")
         {
             GetDamaged();
         }
-        if(other.gameObject.tag == "WinTV")
+        if (other.gameObject.tag == "WinTV")
         {
-            if(collectibleScript.HMCount == 3)
+            if (collectibleScript.HMCount == 3)
             {
-                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
     }
@@ -132,7 +134,7 @@ public class PlayerController2 : MonoBehaviour
     {
         lives -= ghostDamage;
         Debug.Log("Player took damage");
-        if(isInvulnerable == false)
+        if (isInvulnerable == false)
         {
             StartCoroutine("OnInvulnerable");
         }
@@ -151,6 +153,16 @@ public class PlayerController2 : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void godMode()
+    {
+        lives = 999;
+    }
+
+    public void superSpeed()
+    {
+        speed = 3;
     }
 
 }
