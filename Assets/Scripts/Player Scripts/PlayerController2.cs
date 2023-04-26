@@ -121,6 +121,12 @@ public class PlayerController2 : MonoBehaviour
         {
             GetDamaged();
         }
+
+        if (other.gameObject.tag == "Freezable")
+        {
+            GetDamaged();
+        }
+
         if (other.gameObject.tag == "WinTV")
         {
             if (collectibleScript.HMCount == 3)

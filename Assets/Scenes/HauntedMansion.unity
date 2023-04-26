@@ -23218,6 +23218,10 @@ PrefabInstance:
       propertyPath: invisibleThing5
       value: 
       objectReference: {fileID: 1014554093}
+    - target: {fileID: 1402964097, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0369
+      objectReference: {fileID: 0}
     - target: {fileID: 1698955675, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.0124
