@@ -15232,15 +15232,15 @@ PrefabInstance:
     - target: {fileID: 2334466562116555798, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
       propertyPath: sparkle1
       value: 
-      objectReference: {fileID: 1352098250}
+      objectReference: {fileID: 0}
     - target: {fileID: 2334466562116555798, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
       propertyPath: sparkle2
       value: 
-      objectReference: {fileID: 799646853}
+      objectReference: {fileID: 0}
     - target: {fileID: 2334466562116555798, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
       propertyPath: sparkle3
       value: 
-      objectReference: {fileID: 1883486681}
+      objectReference: {fileID: 0}
     - target: {fileID: 2334466562116555798, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
       propertyPath: m_Enabled
       value: 1
