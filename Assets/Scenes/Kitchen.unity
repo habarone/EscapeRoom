@@ -15223,7 +15223,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: a1f6210cafebee14cb2c62de2a01fa77, type: 3}
     - target: {fileID: 2334466562116555798, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2334466562116555798, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
       propertyPath: CollectibleText
