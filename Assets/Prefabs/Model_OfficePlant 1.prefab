@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 632846063200877307}
+  - component: {fileID: -8075807277438810045}
   m_Layer: 0
   m_Name: Model_OfficePlant 1
   m_TagString: Untagged
@@ -35,6 +36,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &-8075807277438810045
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253189527377010753}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.009886497, y: 0.008169191, z: 0.009360662}
+  m_Center: {x: 0.000107851934, y: 0.003822538, z: 0.000052791107}
 --- !u!1 &470196915570672644
 GameObject:
   m_ObjectHideFlags: 0
