@@ -23297,6 +23297,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Model
       objectReference: {fileID: 0}
+    - target: {fileID: 8428874878654308145, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
+      propertyPath: shootClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a53c6f2b46c036d4f8c5014ecc97bdf3, type: 3}
     m_RemovedComponents:
     - {fileID: 104174533, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}

@@ -15222,6 +15222,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: a1f6210cafebee14cb2c62de2a01fa77, type: 3}
     - target: {fileID: 2334466562116555798, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2334466562116555798, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
       propertyPath: CollectibleText
       value: 
       objectReference: {fileID: 204582836}
@@ -15300,7 +15304,7 @@ PrefabInstance:
     - target: {fileID: 8428874878654308145, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
       propertyPath: shootClip
       value: 
-      objectReference: {fileID: 8300000, guid: a53c6f2b46c036d4f8c5014ecc97bdf3, type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 891200171, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
     - {fileID: 104174533, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
