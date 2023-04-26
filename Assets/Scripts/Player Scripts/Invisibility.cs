@@ -19,11 +19,11 @@ public class Invisibility : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        invisibleThing1.SetActive(true);
-        invisibleThing2.SetActive(true);
-        invisibleThing3.SetActive(true);
-        invisibleThing4.SetActive(true);
-        invisibleThing5.SetActive(true);
+       // invisibleThing1.SetActive(true);
+       // invisibleThing2.SetActive(true);
+       // invisibleThing3.SetActive(true);
+       // invisibleThing4.SetActive(true);
+       // invisibleThing5.SetActive(true);
         audioSource = GetComponent<AudioSource>();
     }
 
