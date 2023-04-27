@@ -104,3 +104,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   speed: 2
+  originalSpeed: 0
+  freezeTime: 3
+  Freezing: {fileID: 8300000, guid: a5b2205a0a7905a44a6a571d65f81108, type: 3}
+  Defrosting: {fileID: 8300000, guid: 8e056f0505e49ce469308de08080838c, type: 3}

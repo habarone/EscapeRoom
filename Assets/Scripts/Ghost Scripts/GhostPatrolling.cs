@@ -9,9 +9,13 @@ public class GhostPatrolling : MonoBehaviour
     public float speed;
     public float originalSpeed;
     public float freezeTime = 3;
+    AudioSource audioSource;
+    public AudioClip Freezing;
+    public AudioClip Defrosting;
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         current = 0;
         originalSpeed = speed;
     }
@@ -34,7 +38,7 @@ public class GhostPatrolling : MonoBehaviour
     {
         if(other.gameObject.tag == "FreezeProjectile")
         {
-            //PLAY GHOST FREEZE SOUND HERE
+            audioSource.PlayOneShot(Freezing);
             StartCoroutine(FreezingProcess());
             Destroy(other.gameObject);
             Debug.Log("Contact with ghost");
@@ -50,7 +54,7 @@ public class GhostPatrolling : MonoBehaviour
             timer += Time.deltaTime;
             yield return null;
         }
-        //PLAY GHOST DEFROST HERE
+        audioSource.PlayOneShot(Defrosting);
         speed = originalSpeed;
     }
 }
