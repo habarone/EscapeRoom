@@ -48,6 +48,7 @@ public class GhostPatrolling : MonoBehaviour
     IEnumerator FreezingProcess()
     {
         float timer = 0f;
+        audioSource.PlayOneShot(Freezing);
         while(timer < freezeTime)
         {
             speed = 0;

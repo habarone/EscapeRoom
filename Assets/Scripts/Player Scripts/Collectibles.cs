@@ -42,7 +42,6 @@ public class Collectibles : MonoBehaviour
         sparkle1.SetActive(false);
         sparkle2.SetActive(false);
         sparkle3.SetActive(false);
-        DoneText.enabled = false;
         //use if text is not showing a number on start up:
         //HMText.text = "HMCount(changethis): 0";
     }
@@ -82,9 +81,13 @@ public class Collectibles : MonoBehaviour
             sparkle3.SetActive(true);
         }
 
-        if ((HMCount == 3) || (CSCount == 4))
+        if (HMCount == 3 || CSCount == 4)
         {
             DoneText.enabled = true;
+        }
+        else
+        {
+            DoneText.enabled = false;
         }
 
     }
