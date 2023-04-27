@@ -22,7 +22,7 @@ public class TeleportToPoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(Input.GetKeyDown("q") && ableToPort)
+       if(Input.GetKeyDown("q") && ableToPort || Input.GetKeyDown("joystick button 2") && ableToPort )
         {
             audioSource.PlayOneShot(teleportClip);
             telePos = teleportPoint.transform.position;
