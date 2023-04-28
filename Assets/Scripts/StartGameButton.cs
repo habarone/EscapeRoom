@@ -15,7 +15,7 @@ public class StartGameButton : MonoBehaviour
     }
     public void Update()
     {
-        if (Input.anyKey)
+        if (Input.GetKeyDown("w"))
         {
             Time.timeScale = 1;
             SceneStart.SetActive(false);

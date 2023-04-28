@@ -5,7 +5,7 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public static bool GamePaused = false;
-    public static bool Cheats = false;
+    
 
     public GameObject pauseMenuUI;
     public GameObject cheatsMenuUI;
@@ -30,17 +30,7 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            if (Cheats)
-            {
-                Close();
-            }
-            else
-            {
-                Open();
-            }
-        }
+       
     }
 
     void Resume ()
@@ -57,15 +47,4 @@ public class PauseMenu : MonoBehaviour
         GamePaused = true;
     }
 
-    void Close ()
-    {
-        cheatsMenuUI.SetActive(false);
-        Cheats = false;
-    }
-
-    void Open ()
-    {
-        cheatsMenuUI.SetActive(true);
-        Cheats = true;
-    }
 }
