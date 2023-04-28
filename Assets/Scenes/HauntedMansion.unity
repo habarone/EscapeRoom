@@ -23486,7 +23486,7 @@ PrefabInstance:
     - target: {fileID: 288615828, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
       propertyPath: invisibleThing1
       value: 
-      objectReference: {fileID: 1980944621}
+      objectReference: {fileID: 932836751}
     - target: {fileID: 288615828, guid: 6fa34543df8f15241b0d9e4a98c7e192, type: 3}
       propertyPath: invisibleThing2
       value: 
