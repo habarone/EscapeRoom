@@ -80,7 +80,11 @@ public class PlayerController2 : MonoBehaviour
             //PLAY DEATH SOUND HERE
             StartCoroutine(ResetLevel());
         }
-
+        if (Input.GetKeyDown("escape"))
+        {
+            Application.Quit();
+        }
+        
     }
 
     void HandleMovementInput()
