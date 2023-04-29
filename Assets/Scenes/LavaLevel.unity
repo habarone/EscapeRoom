@@ -13720,14 +13720,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Movement - WASD/ Left Stick
 
-    Freeze Ray - Left Click
+    Freeze Ray - Left Click/ A
 
     Invisbilty
-    Goggles - E
+    Goggles - E/ B
 
-    Teleportation - Q
-
-'
+    Teleportation - Q/ X'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 44474e83e9bed4f4d84dab0586ff9578, type: 2}
   m_sharedMaterial: {fileID: -2279698809539118373, guid: 44474e83e9bed4f4d84dab0586ff9578, type: 2}

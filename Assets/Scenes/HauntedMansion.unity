@@ -3697,7 +3697,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &310347079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24207,12 +24207,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Movement - WASD/ Left Stick
 
-    Freeze Ray - Left Click
+    Freeze Ray - Left Click/ A
 
     Invisbilty
-    Goggles - E
+    Goggles - E/ B
 
-    Teleportation - Q
+    Teleportation - Q/ X
 
 '
   m_isRightToLeft: 0

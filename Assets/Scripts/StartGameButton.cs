@@ -15,7 +15,7 @@ public class StartGameButton : MonoBehaviour
     }
     public void Update()
     {
-        if (Input.GetKeyDown("w"))
+        if (Input.GetKeyDown("w") || Input.GetKeyDown("joystick button 3"))
         {
             Time.timeScale = 1;
             SceneStart.SetActive(false);

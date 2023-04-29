@@ -1389,12 +1389,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Movement - WASD/ Left Stick
 
-    Freeze Ray - Left Click/ RT
+    Freeze Ray - Left Click/ A
 
     Invisbilty
-    Goggles - E/ X
+    Goggles - E/ B
 
-    Teleportation - Q/ RT
+    Teleportation - Q/ X
 
 '
   m_isRightToLeft: 0

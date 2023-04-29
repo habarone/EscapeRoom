@@ -28863,12 +28863,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Movement - WASD/ Left Stick
 
-    Freeze Ray - Left Click
+    Freeze Ray - Left Click/ A
 
     Invisbilty
-    Goggles - E
+    Goggles - E/ B
 
-    Teleportation - Q
+    Teleportation - Q/ X
 
 '
   m_isRightToLeft: 0
